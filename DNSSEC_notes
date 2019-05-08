@@ -1,0 +1,7 @@
+DNCSEC
+
+Secure DNS or DNSSEC
+
+Some common attacks include DNS Hijacking, DNS Poisoning, and Man-in-the-Middle attacks. Most of the DNS attacks exploit unsecured DNS protocol which allows threat actors to impersonate other's by changing name resolution. DNS attacks are especially dangerous because they are easily exacerbated by the normal internet practices of normal users. DNSSEC (DNS Security Extensions) uses digital signatures on data to ensure integrity. Hierarchical digital signitures are present at all layers of the DNS protocol in DNSSEC. DNSSEC is backwards compatible, such that traditional, non-secure DNS lookups still resolve correctly. DNSSEC requires TLS or SSL. 
+
+Additionally, DNS Server redundancy, A.K.A. Anycast Routing or Load Balancing can prevent DNS-based DDoS attacks. DNS Firewalls, from companies like Cloudflare and 
