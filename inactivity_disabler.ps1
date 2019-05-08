@@ -1,3 +1,7 @@
+#credits: Sam Rosenblum of OSibeyond, who wrote the base of this
+
+#periodically run this on every domain controller whenever an incident occurs to disable all AD accounts that are older than 90 days old without a static passwd
+
 #powershell script to disable all accounts that are older than 90 days inactive and 
 # also do not have static passwords
 #OU and DC values need to be changed, please do so during init.
