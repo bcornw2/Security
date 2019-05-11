@@ -34,14 +34,24 @@ The CloudFlare WAF is a “community WAF”, and while they offer different rule
 Both Imperva SecureSphere, and CloudFlare’s WAF tout a <1ms latency for web visitors, and CloudFlare claims a 30s worldwide rule propagation time. Unlike the DNS name-server changes, this rule cannot be tested by bash scripts since the WAF is for enterprise environments only. Both services also meets PCI DSS requirements, which allows users to process credit cards on the WAF-protected site. Alternatively, without a WAF, one would need to conduct semiannual application vulnerability security reviews for all in-scope web applications. 
 
 TBoth WAFs protect against OWASP’s top 10 vulnerabilities, which are:
+
 •	Injection
+
 •	Broken Authentication and Session Management
+
 •	Sensitive Data Exposure
+
 •	XML External Entities (XXE)
+
 •	Broken Access Control
+
 •	Security Misconfiguration
+
 •	Cross-Site Scripting (XSS)
+
 •	Insecure Deserialization
+
 •	Using Components with Known Vulnerabilities
+
 •	Insufficient Logging & Monitoring
 
