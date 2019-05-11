@@ -1,13 +1,13 @@
 #Notes for DNCSEC from CloudFlare
  
 
-##Secure DNS or DNSSEC
+**Secure DNS or DNSSEC**
 
 DNSSEC, or DNS Security, is a newer protocol that expands upon the early DNS protocol. Still using port 53, DNSSEC only uses TCP due to the MTU being too large for UDP, unlike plain DNS. It is used to prevent or hinder some common network attacks such as DNS Hijacking, DNS Poisoning, and Man-in-the-Middle attacks. Most of the DNS attacks exploit unsecured DNS protocol which allows threat actors to impersonate valid querists by exploiting vulnerabilities in name resolution. DNS attacks are especially dangerous because they are easily exacerbated by the normal internet practices of stanard users, and are very hard for users to detect. DNSSEC (DNS Security Extensions) uses digital signatures on the transmitted data to ensure integrity and non-repudiation, and to prevent DNS forgeries. Hierarchical digital signatures are present at all layers of the DNS protocol in DNSSEC. DNSSEC is backwards compatible, such that traditional, non-secure DNS lookups still resolve correctly. DNSSEC requires TLS or SSL. 
 
 Additionally, DNS Server redundancy, A.K.A. Anycast Routing a CloudFlare-specific from of load balancing, can prevent DNS-based DDoS attacks. CloudFlare touts the lowest DNS query speed, as well as the fastest DNS propagation, and as the only one specifically mentioned by name in Michael’s outline, it will be the one that I will initially test.
 
-##How it works
+**How it works**
 
 CloudFlare’s DNSSEC adds an authentication layer to DNS and guarantees that querists reach the website they intended to, supplanting Man-in-the-Middle attacks and DNS poisoning. DNS is a very early protocol and is fundamentally insecure. CloudFlare’s DNSSEC claims to secure the infrastructure using zone enumeration, in addition to certificate infrastructure, and a handy set of additional internet tools.
 
@@ -26,7 +26,7 @@ DNSSEC is to DNS what HTTPS is to the internet. DNSSEC adds additional layers of
 
 Implementing CloudFlare DNSSEC is pretty straightforward. Once the service is started, DNSSEC can be added to any web property by enabling DNSSEC there and adding the DS record to the registrar. Going forward, it is also possible to use CloudFlare as a registrar, such that, conveniently, DNSSEC is included. 
 
-##Testing
+**Testing**
 
 I have enrolled for the free version of DNSSEC through CloudFlare, and the process begins with entering the site you own, then allowing CloudFlare to query your site’s existing DNS records, later importing them into CloudFlare’s database. Then the nameservers will need to be changed to CloudFlare’s nameservers, where they tout a <5m DNS propagation. The free version I selected includes global content delivery network (CDN) which provides cached content, high availability, increased security against DDoS attacks. It also includes optional custom SSL certificates for your site. The “Business” pricing model is $200 per month, and includes Web Application Firewalls with custom CloudFlare rulesets, TLS-only-mode, custom SSL certificates, and image/mobile-browser optimizations. The Enterprise level required a call to determine pricing, and features the best support, with 24/7 coverage by chat, email, or phone, in addition to access to raw request logs, and 100% uptime guarantee with a very generous reimbursement for SLA violations. 
 
