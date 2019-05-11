@@ -1,4 +1,4 @@
-#Notes for DNCSEC from CloudFlare
+[Notes for DNCSEC from CloudFlare]
  
 
 **Secure DNS or DNSSEC**
@@ -45,12 +45,12 @@ The Access tool is also interesting: it will segment off certain parts of your w
 
 The caching feature is also a nice addition, especially in my free-only version. Caching, bandwidth baselining, DNS request measurements, and the graphical site traffic management console are all very useful features that are definitely not included in even my premium WordPress or SiteGround subscriptions. While my free version did not have access to the CloudFlare DNSSEC service, or the custom nameservers, as it would with Business or Enterprise, it was still an enjoyable experience and I will probably keep my free version active on my site.
 
-Use and Experience
+**Use and Experience**
 
 The dashboard is very user-friendly and has a professional and clean GUI. The categories were itemized about the top and were easy to navigate. Most of this may be cosmetic, but it is far better than the administrative console of some services like Mimecast’s administration page’s UI. 
 
 I think, most appropriately, CloudFlare’s “Country Block” service will benefit PPB, so I don’t have to spend all morning manually blocking various @mail.ru domains in their spam filter.
 
-##Take-aways
+**Take-aways**
 
 I did similar research on other DNSSEC and internet security services like UpCloud, CloudBric, Verisign, and others, but I’ve found CloudFlare to be at the forefront of this particular branch of information security, and to have the most complete and engaging toolset. The enterprise package also offers the best coverage for support, and according to some public opinion on various tech forums, CloudFlare also has the best quality of support. 
